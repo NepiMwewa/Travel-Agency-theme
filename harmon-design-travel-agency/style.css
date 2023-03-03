@@ -1,0 +1,453 @@
+/*
+Theme Name: Harmon Design Travel Agency
+Author: Alexander Harmon
+Author URI: https://alexanderharmon.dev/
+Description: Harmon Design Travel Agency child theme
+Version: 1.0
+Template: travel-ultimate
+
+This is the child theme for Travel Ultimate theme, generated with Generate Child Theme plugin by catchthemes.
+
+(optional values you can add: Theme URI, Author URI, License, License URI, Tags, Text Domain)
+*/
+:root{
+  --light-color: #fff;
+  --alt-color: #ecbd78;
+  --alt-color-lighter: #f5d39f;
+  --alt-color-darker: #9b7338;
+  --dark-color: #000;
+	--dark-color-lighter: #333;
+	--header-background: rgba(46, 40, 25, 0.25);
+	--header-font: 'Poppins';
+}
+
+/*
+*Font Changes
+*/
+.section-title {
+	font-family: var(--header-font), cursive;
+}
+#page-site-header .page-title {
+  font-family: var(--header-font), cursive;
+}.featured-content-wrapper .entry-title {
+	font-family: var(--header-font), cursive;
+}.read-more a span {
+	font-family: var(--header-font), cursive;
+}.wp-travel-filter p label {
+	font-family: var(--header-font), cursive;
+}#call-to-action .entry-title {
+	font-family: var(--header-font), cursive;
+}#counter-section h4 {
+    font-family: var(--header-font), cursive;
+}
+
+@media screen and (max-width: 1023px){
+.main-navigation ul.nav-menu > li > a:hover, .main-navigation ul.sub-menu li a:hover,
+.main-navigation ul.nav-menu > li > a:focus, .main-navigation ul.sub-menu li a:focus{
+	border-color: var(--alt-color);
+	background-color: var(--alt-color);
+	color: var(--dark-color) !important;
+}
+}
+
+
+.home .page-section{
+	margin: 24rem 0px 0px;
+}
+#recommended-packages{
+	margin-top: 2rem;
+}
+.wrapper,
+.featured-content-wrapper.wrapper,
+#featured-slider .slick-dots{
+	
+}
+#recommended-packages > .wrapper{
+	max-width: 2000px;
+}
+#recommended-packages .section-header{
+	margin-bottom: calc(2rem + 80px);
+}
+#about-us{
+	background-color: var(--alt-color);
+	background-image: none !important;
+}
+#about-us .tours-slider.classic-slider{
+	max-width: 1800px;
+}
+
+#about-us .tours-slider:before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	right: auto;
+	left: 50%;
+	width: 100vw;
+	translate: -50%;
+	height: 50%;
+	background-color: #fff;
+}
+#about-us .tours-slider:after {
+	content: "";
+	position: absolute;
+	bottom: -80px;
+	right: auto;
+	left: 50%;
+	width: 100vw;
+	translate: -50%;
+	height: 80px;
+	background-color: #fff;
+}
+.featured-content-wrapper .entry-title{
+	text-align: center;
+}
+#page-site-header,
+#featured-slider{
+	padding: 0px;
+	height: 100vh;
+}
+#featured-slider .slick-list,
+#featured-slider .slick-list .slick-track{
+	height: 100%;
+}
+#page-site-header .wrapper,
+#featured-slider .featured-content-wrapper.wrapper{
+	top: 50%;
+}
+.featured-content-wrapper.wrapper a,
+#page-site-header .page-title{
+	text-shadow: 1px 1px 2px black;
+}
+.footer-widgets-area.page-section{
+	margin: 5rem 0px 0px;
+}
+.wp-travel-default-article{
+	position: relative;
+}
+.wp-travel-savings {
+	position: absolute;
+	bottom: auto;
+	top: 27px !important;
+	background: #00921d;
+	color: #fff;
+	right: -8px;
+	padding: 5px 8px;
+	text-align: center;
+	z-index: 2;
+}
+
+/*
+*	Homepage colors
+*/
+.main-navigation ul ul {
+	border-top: 2px solid var(--alt-color);
+}
+.main-navigation ul.nav-menu > li.menu-item-has-children:hover > a::after{
+	border-bottom: 7px solid var(--alt-color);
+}
+.main-navigation ul.sub-menu li:hover > a,
+.main-navigation ul.sub-menu li > a:focus {
+	background-color: var(--alt-color);
+	color: var(--dark-color-lighter) !important;
+}
+
+#masthead.site-header{
+	top: 0;
+	position: fixed;
+	background-color: var(--header-background);
+	backdrop-filter: blur(1px);
+}
+.wrapper.main-menu{
+	border-bottom: none;
+}
+#featured-slider .slick-dots li.slick-active:before{
+	background-color: var(--alt-color);
+}
+.slick-prev:hover,
+.slick-next:hover,
+.slick-prev:focus,
+.slick-next:focus{
+	background-color: var(--alt-color);
+}
+a:hover,
+a:focus{
+	color: var(--alt-color) !important;
+}
+.btn{
+	border: none;
+	color: var(--dark-color);
+	background-color: var(--alt-color);
+}
+.btn:hover, .btn:focus{
+	color: var(--alt-color);
+	background-color: var(--dark-color);
+}
+#travel-destinations .trip-price span{
+	background-color: var(--alt-color);
+	color: var(--dark-color);
+}
+.backtotop{
+	background-color: var(--alt-color);
+}
+.backtotop svg{
+	fill: var(--dark-color)
+}
+#latest-posts .posted-on svg{
+	fill: var(--alt-color);
+}
+
+#latest-posts .featured-image .post-categories{
+	background-color: var(--alt-color);
+	color: var(--alt-color);
+}
+#latest-posts .featured-image .post-categories a{
+	color: var(--dark-color);
+}
+#latest-posts article .post-item-wrapper{
+	border-bottom-color: var(--dark-color);
+}
+#wp-travel_rate a{
+	color: var(--alt-color);
+}
+
+/*
+*	travel itenirary colors
+*/
+.wp-travel-trip-code span::after{
+	content: '';
+}
+ .wp-travel-trip-meta-info{
+	background-color: var(--alt-color);
+}
+.wp-travel-trip-meta-info ul li{
+	border-right-color: var(--alt-color-darker);
+}
+.travel-info .title, .travel-info, .travel-info .value, .wp-travel-trip-meta-info ul li a{
+	color: var(--dark-color);
+}
+.wp-travel-trip-meta-info ul li a:hover{
+	color: var(--dark-color-lighter) !important;
+}
+.wp-travel.trip-headline-wrapper .wp-travel-booknow-btn{
+	background-color: var(--alt-color);
+	color: var(--dark-color);
+}
+.wp-travel.trip-headline-wrapper .wp-travel-booknow-btn:hover, .wp-travel.trip-headline-wrapper .wp-travel-booknow-btn:focus{
+	color: var(--alt-color);
+}
+#wp-travel-send-enquiries{
+	color: var(--dark-color);
+	border-color: var(--alt-color);
+}
+#wp-travel-send-enquiries:hover, #wp-travel-send-enquiries:focus{
+	background-color: var(--dark-color-lighter);
+	color: var(--alt-color);
+	border-color: var(--dark-color);
+}
+.wp-travel-notice{
+	padding-left: 45px;
+}
+.wp-travel-notice::before{
+	position: relative !important;
+	left: -10px !important;
+	top: auto !important;
+}
+.wp-travel-trip-code code,
+.section-subtitle{
+	color: var(--alt-color-darker);
+}
+.wp-travel.tab-list .slick-list{
+	padding: 0px 10px;
+}
+.wp-travel-gallery ul{
+	column-gap: 0px;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.wp-travel-gallery .wp-travel-row-wrap ul li{
+	width: 100%;
+}
+@media (max-width: 992px){
+	.wp-travel-itinerary-items ul.wp-travel-itinerary-list[class*=itinerary-] li {
+			width: 100%;
+	}
+}
+@media (max-width: 767px){
+	.wp-travel-row-wrap {
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+	.wp-travel-gallery ul li{
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+}
+.wp-travel-tab-wrapper .tab-list.resp-tabs-list li.resp-tab-active{
+	border-bottom-color: var(--alt-color);
+}
+#wp-travel-tab-wrapper + .wp-travel-map{
+	display: block;
+	margin-bottom: 70px;
+}
+#wp-travel-tab-wrapper{
+	margin-bottom: 70px !important;
+}
+#wp-travel-tab-wrapper + .wp-travel-map iframe{
+	height: 500px !important;
+}
+.wp-travel-calendar-view .wp-travel-booking__datepicker-wrapper p{
+	border-color: var(--dark-color);
+	color: var(--dark-color);
+	background-color: var(--light-color);
+}
+.wp-travel-calendar-view .wp-travel-booking__datepicker-wrapper p::before{
+	border-right-color: var(--dark-color);
+}
+.wp-travel-calendar-view .wp-travel-booking__datepicker-wrapper p::after{
+	border-right-color: var(--light-color);
+}
+#respond input[type="submit"]{
+	border: none;
+	color: var(--dark-color);
+	background-color: var(--alt-color);
+}
+#respond input[type="submit"]:hover, #respond input[type="submit"]:focus {
+	background-color: var(--dark-color);
+	color: var(--alt-color);
+}
+
+.wp-travel-itinerary-items ul.wp-travel-itinerary-list{
+	display: grid;
+}
+.wp-travel-related-posts:before{
+	background-image: none;
+	background-color: var(--alt-color);
+}
+#wp-travel-send-enquiries .dashicons, #wp-travel-send-enquiries .dashicons-before:before{
+	transition: none;
+}
+.wp-travel.trip-headline-wrapper .wp-travel-booking-enquiry,
+.wp-travel.trip-headline-wrapper .wp-travel-booking-enquiry span{
+	transition: none;
+}
+#wp-travel-send-enquiries{
+	transition: all 0.3s ease-in-out;
+}
+.itenary .image{
+	background-color: var(--alt-color);
+	border-color: var(--alt-color);
+}
+.tc-content.right,
+.tc-content.left{
+	border-color: var(--alt-color);
+}
+/*
+*	calender colors
+*/
+
+.wp-travel-calendar-view .wp-travel-booking__datepicker-wrapper .react-datepicker-wrapper .react-datepicker__input-container .wp-travel-date-picker-btn{
+	background-color: var(--alt-color);
+}
+.react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle::before{
+	border-bottom-color:var(--dark-color);
+}
+.react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle::after{
+	border-bottom-color: var(--alt-color);
+}
+.wp-travel-calendar-view .wp-travel-booking__datepicker-wrapper .react-datepicker__tab-loop .react-datepicker-popper .react-datepicker .react-datepicker__month-container .react-datepicker__header{
+	background-color: var(--alt-color);
+	
+}
+.wp-travel-calendar-view .wp-travel-booking__datepicker-wrapper .react-datepicker__tab-loop .react-datepicker-popper .react-datepicker .react-datepicker__month-container .react-datepicker__header .react-datepicker__current-month,
+.wp-travel-calendar-view .wp-travel-booking__datepicker-wrapper .react-datepicker__tab-loop .react-datepicker-popper .react-datepicker .react-datepicker__month-container .react-datepicker__header .react-datepicker__day-names .react-datepicker__day-name,
+.wp-travel-calendar-view .wp-travel-booking__datepicker-wrapper .react-datepicker__tab-loop .react-datepicker-popper .react-datepicker .react-datepicker__navigation{
+	color: var(--dark-color);
+}
+.wp-travel-calendar-view .wp-travel-booking__datepicker-wrapper .react-datepicker__tab-loop .react-datepicker-popper .react-datepicker .react-datepicker__month-container .react-datepicker__header .react-datepicker__header__dropdown [class*=react-datepicker] select{
+	color: var(--dark-color);
+	border-color:  var(--dark-color);
+}
+.react-datepicker__day--selected, .react-datepicker__day--in-selecting-range, .react-datepicker__day--in-range, .react-datepicker__month-text--selected, .react-datepicker__month-text--in-selecting-range, .react-datepicker__month-text--in-range, .react-datepicker__quarter-text--selected, .react-datepicker__quarter-text--in-selecting-range, .react-datepicker__quarter-text--in-range, .react-datepicker__year-text--selected, .react-datepicker__year-text--in-selecting-range{
+	background-color: var(--alt-color);
+	color: var(--dark-color);
+}
+.wp-travel-calendar-view .wp-travel-booking__datepicker-wrapper .react-datepicker__tab-loop .react-datepicker-popper .react-datepicker .react-datepicker__month-container .react-datepicker__month .react-datepicker__week .react-datepicker__day--keyboard-selected{
+	color: var(--light-color);
+}
+.react-datepicker__day--selected:hover, .react-datepicker__day--in-selecting-range:hover, .react-datepicker__day--in-range:hover, .react-datepicker__month-text--selected:hover, .react-datepicker__month-text--in-selecting-range:hover, .react-datepicker__month-text--in-range:hover, .react-datepicker__quarter-text--selected:hover, .react-datepicker__quarter-text--in-selecting-range:hover, .react-datepicker__quarter-text--in-range:hover, .react-datepicker__year-text--selected:hover, .react-datepicker__year-text--in-selecting-range:hover, .react-datepicker__year-text--in-range:hover{
+	background-color: var(--alt-color-darker);
+}
+
+.react-datepicker__tab-loop .react-datepicker-popper{
+	z-index: 200;
+}
+.wp-travel-calendar-view .wp-travel-booking__pricing-wrapper .wp-travel-booking__pricing-name button.active{
+	background-color: var(--light-color);
+	color: var(--alt-color-darker);
+	border-color: var(--alt-color-darker);
+}
+
+/*
+*Archives
+*/
+.wp-travel-toolbar .wp-travel-post-filter .wp-travel-filter-by-heading{
+	background-color: var(--alt-color);
+	color: var(--dark-color);
+}
+.wp-travel-toolbar .wp-travel-post-filter .wp-travel-filter-by-heading h4{
+	color: var(--dark-color);
+}
+.ws-theme-cart-page .coupon input[type=submit], .ws-theme-cart-page .coupon .wp-travel-tab-wrapper .wp-travel-booking-form-wrapper form .wp-travel-form-field select[type=submit], .wp-travel-tab-wrapper .wp-travel-booking-form-wrapper form .wp-travel-form-field .ws-theme-cart-page .coupon select[type=submit], .ws-theme-cart-page .coupon .wp-travel-tab-wrapper .wp-travel-booking-form-wrapper form .wp-travel-form-field textarea[type=submit], .wp-travel-tab-wrapper .wp-travel-booking-form-wrapper form .wp-travel-form-field .ws-theme-cart-page .coupon textarea[type=submit], .ws-theme-cart-page .actions .book-now-btn, .ws-theme-cart-page button[disabled], .ws-theme-cart-page input[disabled], .ws-theme-cart-page .wp-travel-tab-wrapper .wp-travel-booking-form-wrapper form .wp-travel-form-field select[disabled], .wp-travel-tab-wrapper .wp-travel-booking-form-wrapper form .wp-travel-form-field .ws-theme-cart-page select[disabled], .ws-theme-cart-page .wp-travel-tab-wrapper .wp-travel-booking-form-wrapper form .wp-travel-form-field textarea[disabled], .wp-travel-tab-wrapper .wp-travel-booking-form-wrapper form .wp-travel-form-field .ws-theme-cart-page textarea[disabled], .wp-travel-form-field.button-field input[type="submit"], .payment-content input[type="submit"], .dashboard-tab .payment-content input[type="submit"], .dashboard-tab .account-setting input[type="submit"], .wp-travel-default-article .wp-travel-explore a, .wp-travel-toolbar .wp-travel-filter-button .btn-wp-travel-filter, .ws-theme-cart-page .update-cart{
+	border-color: var(--alt-color);
+	background-color: var(--alt-color);
+	color: var(--dark-color);
+}
+.ws-theme-cart-page .coupon input[type=submit]:hover, .ws-theme-cart-page .coupon .wp-travel-tab-wrapper .wp-travel-booking-form-wrapper form .wp-travel-form-field select[type=submit]:hover, .wp-travel-tab-wrapper .wp-travel-booking-form-wrapper form .wp-travel-form-field .ws-theme-cart-page .coupon select[type=submit]:hover, .ws-theme-cart-page .coupon .wp-travel-tab-wrapper .wp-travel-booking-form-wrapper form .wp-travel-form-field textarea[type=submit]:hover, .wp-travel-tab-wrapper .wp-travel-booking-form-wrapper form .wp-travel-form-field .ws-theme-cart-page .coupon textarea[type=submit]:hover, .ws-theme-cart-page .coupon input[type=submit]:focus, .ws-theme-cart-page .coupon .wp-travel-tab-wrapper .wp-travel-booking-form-wrapper form .wp-travel-form-field select[type=submit]:focus, .wp-travel-tab-wrapper .wp-travel-booking-form-wrapper form .wp-travel-form-field .ws-theme-cart-page .coupon select[type=submit]:focus, .ws-theme-cart-page .coupon .wp-travel-tab-wrapper .wp-travel-booking-form-wrapper form .wp-travel-form-field textarea[type=submit]:focus, .wp-travel-tab-wrapper .wp-travel-booking-form-wrapper form .wp-travel-form-field .ws-theme-cart-page .coupon textarea[type=submit]:focus, .ws-theme-cart-page .actions .book-now-btn:hover, .ws-theme-cart-page .actions .book-now-btn:focus, .ws-theme-cart-page button[disabled]:hover, .ws-theme-cart-page input[disabled]:hover, .ws-theme-cart-page .wp-travel-tab-wrapper .wp-travel-booking-form-wrapper form .wp-travel-form-field select[disabled]:hover, .wp-travel-tab-wrapper .wp-travel-booking-form-wrapper form .wp-travel-form-field .ws-theme-cart-page select[disabled]:hover, .ws-theme-cart-page .wp-travel-tab-wrapper .wp-travel-booking-form-wrapper form .wp-travel-form-field textarea[disabled]:hover, .wp-travel-tab-wrapper .wp-travel-booking-form-wrapper form .wp-travel-form-field .ws-theme-cart-page textarea[disabled]:hover, .ws-theme-cart-page button[disabled]:focus, .ws-theme-cart-page input[disabled]:focus, .ws-theme-cart-page .wp-travel-tab-wrapper .wp-travel-booking-form-wrapper form .wp-travel-form-field select[disabled]:focus, .wp-travel-tab-wrapper .wp-travel-booking-form-wrapper form .wp-travel-form-field .ws-theme-cart-page select[disabled]:focus, .ws-theme-cart-page .wp-travel-tab-wrapper .wp-travel-booking-form-wrapper form .wp-travel-form-field textarea[disabled]:focus, .wp-travel-tab-wrapper .wp-travel-booking-form-wrapper form .wp-travel-form-field .ws-theme-cart-page textarea[disabled]:focus, .wp-travel-form-field.button-field input[type="submit"]:hover, .wp-travel-form-field.button-field input[type="submit"]:focus, .payment-content input[type="submit"]:hover, .payment-content input[type="submit"]:focus, .dashboard-tab .payment-content input[type="submit"]:hover, .dashboard-tab .account-setting input[type="submit"]:hover, .dashboard-tab .payment-content input[type="submit"]:focus, .dashboard-tab .account-setting input[type="submit"]:focus, .wp-travel-default-article .wp-travel-explore a:hover, .wp-travel-default-article .wp-travel-explore a:focus, .wp-travel-toolbar .wp-travel-filter-button .btn-wp-travel-filter:hover, .wp-travel-toolbar .wp-travel-filter-button .btn-wp-travel-filter:focus, .ws-theme-cart-page .update-cart:hover, .ws-theme-cart-page .update-cart:focus{
+	border-color: var(--dark-color);
+	background-color: var(--dark-color);
+	color: var(--alt-color);
+}
+.wp-travel-toolbar .wp-travel-view-mode-lists li a:hover, .wp-travel-toolbar .wp-travel-view-mode-lists li a:focus{
+	color: var(--dark-color) !important;
+}
+.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-background):hover, .wp-block-button .wp-block-button__link.is-style-outline:not(.has-background):hover,
+.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-background):focus, .wp-block-button .wp-block-button__link.is-style-outline:not(.has-background):focus{
+	
+	background-color: var(--alt-color);
+	color: var(--dark-color) !important;
+}
+.wp-travel-itinerary-items .wp-travel-post-item-wrapper .wp-travel-post-content .post-category a{
+	color: var(--dark-color);
+}
+
+
+#colophon .site-info a{
+	color: var(--alt-color-darker);
+}
+
+/*
+* Dashboard
+*/
+
+.dashboard-tab ul.resp-tabs-list{
+	background-color: var(--alt-color);
+}
+.dashboard-tab ul.resp-tabs-list li, 
+.dashboard-tab ul.resp-tabs-list li:hover{
+	color: var(--dark-color-lighter);
+}
+
+.dashboard-tab ul.resp-tabs-list li.resp-tab-active{
+	box-shadow: inset 2px 0px 0 var(--alt-color);
+}
+.wp-travel-tab-content-dashboard .box-content li > a{
+	color: var(--dark-color) !important;
+}
+#wp-travel-tab-content-bookings .my-order-details .table-wrp .my-order-single-field a,
+.mfp-content .my-order-details .table-wrp .my-order-single-field{
+	color: var(--dark-color-lighter);
+	text-decoration: underline;
+}
+.dashboard-tab a{ 
+	color: var(--dark-color-lighter);
+	text-decoration: underline;
+}

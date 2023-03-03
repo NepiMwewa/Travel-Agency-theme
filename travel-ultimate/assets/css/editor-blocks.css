@@ -1,0 +1,57 @@
+.wp-block {
+    max-width: 840px;
+}
+/*--------------------------------------------------------------
+8.0 Blocks - Patterns
+--------------------------------------------------------------*/
+.wp-block-buttons {
+    margin-top: 3rem;
+    margin-right: auto;
+    margin-bottom: 3rem;
+    margin-left: auto;
+}
+.wp-block-cover {
+    margin-bottom: 3em;
+}
+.wp-block-image {
+    margin: 2em 0;
+}
+button:focus,
+button:hover,
+.button:focus,
+.button:hover,
+.faux-button:focus,
+.faux-button:hover,
+.wp-block-button .wp-block-button__link:focus,
+.wp-block-button .wp-block-button__link:hover,
+.wp-block-file .wp-block-file__button:focus,
+.wp-block-file .wp-block-file__button:hover,
+input[type="button"]:focus,
+input[type="button"]:hover,
+input[type="reset"]:focus,
+input[type="reset"]:hover,
+input[type="submit"]:focus,
+input[type="submit"]:hover {
+    text-decoration: underline;
+}
+.wp-block-button.is-style-outline .wp-block-button__link,
+.wp-block-button__link.is-style-outline {
+    color: #32373C;
+    background-color: transparent;
+    border: 2px solid;
+}
+.wp-block-separator.is-style-dots::before {
+    background: none;
+    color: inherit;
+    font-size: 3.2rem;
+    font-weight: 700;
+    height: auto;
+    letter-spacing: 1em;
+    padding-left: 1em;
+    position: static;
+    transform: none;
+    width: auto;
+}
+.wp-block-gallery {
+    margin: 2.5em 0 1em;
+}
