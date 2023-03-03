@@ -168,6 +168,18 @@ function travel_ultimate_is_slider_section_content_page_enable( $control ) {
 }
 
 /**
+ * Check if slider section content type is custom.
+ *
+ * @since Travel Ultimate 1.0.0
+ * @param WP_Customize_Control $control WP_Customize_Control instance.
+ * @return bool Whether the control is active to the current preview.
+ */
+function travel_ultimate_is_slider_section_content_custom_enable( $control ) {
+	$content_type = $control->manager->get_setting( 'travel_ultimate_theme_options[slider_content_type]' )->value();
+	return travel_ultimate_is_slider_section_enable( $control ) && ( 'custom' == $content_type );
+}
+
+/**
  * Check if destination section is enabled.
  *
  * @since Travel Ultimate 1.0.0

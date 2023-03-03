@@ -246,7 +246,7 @@ if ( ! function_exists( 'travel_ultimate_header_image' ) ) :
 											<h2 class="page-title"><?php single_post_title(); ?></h2>
 										<?php elseif ( is_archive() ) : 
 											the_archive_title( '<h2 class="page-title">', '</h2>' );
-											echo '<div id="archive-descript" class="archive-description">'. get_option('twitterid') .'</div>';
+											the_archive_description( '<div class="archive-description">', '</div>' );
 										elseif ( is_search() ) : ?>
 											<h2 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'travel-ultimate' ), get_search_query() ); ?></h2>
 										<?php elseif ( is_404() ) :

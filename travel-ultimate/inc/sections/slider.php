@@ -26,12 +26,12 @@ if ( ! function_exists( 'travel_ultimate_add_slider_section' ) ) :
         $section_details = array();
         $section_details = apply_filters( 'travel_ultimate_filter_slider_section_details', $section_details );
 
-        if ( empty( $section_details ) ) {
+        if ( empty( $section_details )) {
             return;
         }
 
         // Render slider section now.
-        travel_ultimate_render_slider_section( $section_details );
+        travel_ultimate_render_slider_section( $section_details);
     }
 endif;
 
@@ -84,11 +84,27 @@ if ( ! function_exists( 'travel_ultimate_get_slider_section_details' ) ) :
                     );                    
             break;
 
+            case 'custom':
+                $custom_array = array();
+
+                for ( $i = 1; $i <= 3; $i++ ) {
+                    if ( ! empty( $options['custom_title_' . $i] ) )
+                        $page_titles[] = $options['custom_title_' . $i];
+                }
+                $args = array(
+                    'titles'         => ( array ) $page_titles,
+                    );                    
+            break;
+
             default:
             break;
         }
 
-
+            if($slider_content_type == 'custom'){
+                for ($i=0; $i <= 3; $i++) { 
+                    isset( $options['custom_title_' . $i ] ) ? array_push( $content, $options['custom_title_' . $i ] ) : false;
+                }
+            }else{
             // Run The Loop.
             $query = new WP_Query( $args );
             if ( $query->have_posts() ) : 
@@ -103,6 +119,7 @@ if ( ! function_exists( 'travel_ultimate_get_slider_section_details' ) ) :
                 endwhile;
             endif;
             wp_reset_postdata();
+            }   
 
             
         if ( ! empty( $content ) ) {
@@ -129,7 +146,32 @@ if ( ! function_exists( 'travel_ultimate_render_slider_section' ) ) :
         if ( empty( $content_details ) ) {
             return;
         } 
-
+        $slider_content_type  = $options['slider_content_type'];
+        if($slider_content_type == 'custom'){
+            ?>
+            <div id="featured-slider" data-slick='{"slidesToShow": 1, "slidesToScroll": 1, "infinite": true, "speed": 1000, "dots": true, "arrows":true, "autoplay": true, "draggable": true, "fade": true }'>
+                <?php $i =  1;
+                foreach ( $content_details as $content ) : 
+                    $img = ( ! empty( $options['custom_image_' . $i ] ) ) ? $options['custom_image_' . $i ] : '';
+                    $title = ( ! empty( $options['custom_title_' . $i ] ) ) ? $options['custom_title_' . $i ] : '';
+                    $description = ( ! empty( $options['custom_description_' . $i ] ) ) ? $options['custom_description_' . $i ] : '';
+                    $url = ( ! empty( $options['custom_url_' . $i ] ) ) ? $options['custom_url_' . $i ] : '';
+                    ?>
+                    <article data-title="<?php echo $title; ?>" style="background-image:url('<?php echo esc_url( $img ); ?>');">
+                        <div class="overlay"></div>
+                        <div class="featured-content-wrapper wrapper">
+                            <header class="entry-header">
+                                <h2 class="entry-title"><a href="<?php echo esc_url( $url ); ?>"><?php echo esc_html( $title ); ?></a></h2>
+                                <h4 class="entry-description"><?php echo esc_html( $description ); ?></h4>
+                            </header>
+                        </div><!-- .featured-content-wrapper -->
+                    </article>
+                <?php
+                $i++;
+                endforeach; ?>
+            </div><!-- .project-slider -->
+            <?php
+        }else{
         ?>
             <div id="featured-slider" data-slick='{"slidesToShow": 1, "slidesToScroll": 1, "infinite": true, "speed": 1000, "dots": true, "arrows":true, "autoplay": true, "draggable": true, "fade": true }'>
                 <?php 
@@ -148,5 +190,5 @@ if ( ! function_exists( 'travel_ultimate_render_slider_section' ) ) :
                 endforeach; ?>
             </div><!-- .project-slider -->
 
-    <?php }
+    <?php }}
 endif;

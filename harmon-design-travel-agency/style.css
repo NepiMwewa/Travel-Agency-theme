@@ -18,29 +18,65 @@ This is the child theme for Travel Ultimate theme, generated with Generate Child
   --dark-color: #000;
 	--dark-color-lighter: #333;
 	--header-background: rgba(46, 40, 25, 0.25);
-	--header-font: 'Poppins';
+	--header-font: 'Poppins', sans-serif;
 }
 
 /*
 *Font Changes
 */
 .section-title {
-	font-family: var(--header-font), cursive;
+	font-family: var(--header-font);
 }
 #page-site-header .page-title {
-  font-family: var(--header-font), cursive;
+  font-family: var(--header-font);
 }.featured-content-wrapper .entry-title {
-	font-family: var(--header-font), cursive;
+	font-family: var(--header-font);
 }.read-more a span {
-	font-family: var(--header-font), cursive;
+	font-family: var(--header-font);
 }.wp-travel-filter p label {
-	font-family: var(--header-font), cursive;
+	font-family: var(--header-font);
 }#call-to-action .entry-title {
-	font-family: var(--header-font), cursive;
+	font-family: var(--header-font);
 }#counter-section h4 {
-    font-family: var(--header-font), cursive;
+    font-family: var(--header-font);
+}
+.entry-description{
+	font-family: var(--header-font);
+	font-size: 18px;
+	text-align: center;
+	color: var(--light-color);
+	margin-top: 40px;
+	text-shadow: 1px 1px 2px black;
+}
+.featured-content-wrapper .entry-title{
+	text-align: center;
+	font-size: 68px;
+}
+@media screen and (max-width: 992px) {
+	.featured-content-wrapper .entry-title{
+		font-size: 52px;
+	}
+	.entry-description{
+		font-size: 16px;
+	}
 }
 
+@media screen and (max-width: 767px){
+	.featured-content-wrapper .entry-title{
+		font-size: 42px;
+	}
+	.entry-description{
+		font-size: 15px;
+	}
+}
+@media screen and (max-width: 567px){
+	.featured-content-wrapper .entry-title{
+		font-size: 36px;
+	}
+	.entry-description{
+		font-size: 14px;
+	}
+}
 @media screen and (max-width: 1023px){
 .main-navigation ul.nav-menu > li > a:hover, .main-navigation ul.sub-menu li a:hover,
 .main-navigation ul.nav-menu > li > a:focus, .main-navigation ul.sub-menu li a:focus{
@@ -49,18 +85,32 @@ This is the child theme for Travel Ultimate theme, generated with Generate Child
 	color: var(--dark-color) !important;
 }
 }
+#about-us .section-header, #about-us .section-content {
+	width: 45%;
+}
+@media screen and (max-width: 1200px){
+	#about-us .section-header, #about-us .section-content {
+			width: 45%;
+			padding: 0 30px;
+	}
+}
+@media screen and (max-width: 992px) {
+#about-us .section-header, #about-us .section-content {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+}
+}
 
+.archive-description p{
+	margin-top: 40px;
+}
 
 .home .page-section{
 	margin: 24rem 0px 0px;
 }
 #recommended-packages{
 	margin-top: 2rem;
-}
-.wrapper,
-.featured-content-wrapper.wrapper,
-#featured-slider .slick-dots{
-	
 }
 #recommended-packages > .wrapper{
 	max-width: 2000px;
@@ -97,9 +147,6 @@ This is the child theme for Travel Ultimate theme, generated with Generate Child
 	translate: -50%;
 	height: 80px;
 	background-color: #fff;
-}
-.featured-content-wrapper .entry-title{
-	text-align: center;
 }
 #page-site-header,
 #featured-slider{
@@ -422,6 +469,22 @@ a:focus{
 
 #colophon .site-info a{
 	color: var(--alt-color-darker);
+}
+
+@media (max-width: 767px){
+	.wp-travel-toolbar .wp-toolbar-content.wp-toolbar-left{
+		width: 100%;
+	}
+	.wp-travel-toolbar .wp-travel-post-filter .wp-travel-filter-by-heading h4,
+	.wp-travel-toolbar .wp-travel-filter-button .btn-wp-travel-filter {
+			display: none;
+	}
+	.wp-travel-toolbar .wp-travel-filter-button.show-in-mobile .btn-wp-travel-filter{
+		display: inline-block;
+	}
+	.wp-travel-toolbar .wp-travel-post-filter{
+		padding-right: 15px;
+	}
 }
 
 /*
