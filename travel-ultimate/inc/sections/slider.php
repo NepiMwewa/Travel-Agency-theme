@@ -156,6 +156,7 @@ if ( ! function_exists( 'travel_ultimate_render_slider_section' ) ) :
                     $title = ( ! empty( $options['custom_title_' . $i ] ) ) ? $options['custom_title_' . $i ] : '';
                     $description = ( ! empty( $options['custom_description_' . $i ] ) ) ? $options['custom_description_' . $i ] : '';
                     $url = ( ! empty( $options['custom_url_' . $i ] ) ) ? $options['custom_url_' . $i ] : '';
+                    if($title != ''){
                     ?>
                     <article data-title="<?php echo $title; ?>" style="background-image:url('<?php echo esc_url( $img ); ?>');">
                         <div class="overlay"></div>
@@ -167,6 +168,7 @@ if ( ! function_exists( 'travel_ultimate_render_slider_section' ) ) :
                         </div><!-- .featured-content-wrapper -->
                     </article>
                 <?php
+                }
                 $i++;
                 endforeach; ?>
             </div><!-- .project-slider -->
