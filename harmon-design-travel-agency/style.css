@@ -387,6 +387,30 @@ a:focus{
 .tc-content.left{
 	border-color: var(--alt-color);
 }
+
+#faq .wp-collapse-open a{
+	border: none;
+}
+#faq a::before {
+	content: "" !important;
+	background-image: url(assets/faqs-arrow.svg);
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	opacity: 1;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+#faq a.close-all-link::before {
+	-webkit-transform: rotate(-180deg);
+	-moz-transform: rotate(-180deg);
+	-ms-transform: rotate(-180deg);
+	-o-transform: rotate(-180deg);
+	transform: rotate(-180deg);
+}
+#faq a span{
+	display: none;
+}
 /*
 *	calender colors
 */
@@ -514,3 +538,4 @@ a:focus{
 	color: var(--dark-color-lighter);
 	text-decoration: underline;
 }
+

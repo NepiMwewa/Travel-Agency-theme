@@ -36,3 +36,28 @@ function my_theme_archive_title( $title ) {
 }
 
 add_filter( 'get_the_archive_title', 'my_theme_archive_title' );
+
+add_action('admin_menu', 'add_copyright_options');
+
+function add_copyright_options()
+{
+	add_options_page('Copyright Options', 'Copyright Options', 'manage_options', 'functions','copyright_options');
+}
+
+function copyright_options()
+{
+?>
+	<div class="wrap">
+		<h2>Copyright Options</h2>
+		<form method="post" action="options.php">
+			<?php wp_nonce_field('update-options') ?>
+			<p><strong>Copyright Name:</strong><br />
+				<input type="text" name="copyrightName" size="45" value="<?php echo get_option('copyrightName'); ?>" />
+			</p>
+			<p><input type="submit" name="Submit" value="Store Options" /></p>
+			<input type="hidden" name="action" value="update" />
+			<input type="hidden" name="page_options" value="copyrightName" />
+		</form>
+	</div>
+<?php
+}

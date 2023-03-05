@@ -343,7 +343,7 @@ if ( ! function_exists( 'travel_ultimate_footer_site_info' ) ) :
 
         // $options['copyright_text'] = str_replace( $search, $replace, $options['copyright_text'] );
 
-		$copyright_text = sprintf( esc_html__( 'Copyright &copy; %1$s %2$s | Website Design by %3$s', 'travel-ultimate' ), date( 'Y' ), esc_html( 'Travel Agency' ), '&nbsp;<a target="_blank" href="'. esc_url( $theme_data->get( 'AuthorURI' ) ) .'">'. esc_html( ucwords( $theme_data->get( 'Author' ) ) ) .'</a>' ); 
+		$copyright_text = sprintf( esc_html__( 'Copyright &copy; %1$s %2$s | Website Design by %3$s', 'travel-ultimate' ), date( 'Y' ), get_option('copyrightName'), '&nbsp;<a target="_blank" href="'. esc_url( $theme_data->get( 'AuthorURI' ) ) .'">'. esc_html( ucwords( $theme_data->get( 'Author' ) ) ) .'</a>' ); 
 
 		if ( ! empty( $copyright_text ) && has_nav_menu( 'social' ) ) {
 			$col = 2;
