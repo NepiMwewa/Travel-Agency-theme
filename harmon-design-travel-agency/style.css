@@ -102,6 +102,18 @@ This is the child theme for Travel Ultimate theme, generated with Generate Child
 }
 }
 
+#featured-slider .slick-dots li:before{
+	left: 50%;
+}
+#featured-slider .slick-dots li.slick-active:before{
+		background-color: var(--alt-color);
+}
+.slider-nav .slide-title{
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+}
+
 .archive-description p{
 	margin-top: 40px;
 }
@@ -140,12 +152,12 @@ This is the child theme for Travel Ultimate theme, generated with Generate Child
 #about-us .tours-slider:after {
 	content: "";
 	position: absolute;
-	bottom: -80px;
+	bottom: -100px;
 	right: auto;
 	left: 50%;
 	width: 100vw;
 	translate: -50%;
-	height: 80px;
+	height: 100px;
 	background-color: #fff;
 }
 #page-site-header,
@@ -388,27 +400,36 @@ a:focus{
 	border-color: var(--alt-color);
 }
 
-#faq .wp-collapse-open a{
+#faq .wp-collapse-open a, .global-faq-shortcode .wp-collapse-open a, .checkout-accordion .wp-collapse-open a{
+	color: var(--dark-color);
+}
+
+#faq .wp-collapse-open a, .checkout-accordion .wp-collapse-open a{
 	border: none;
 }
-#faq a::before {
+#faq a::before, .checkout-accordion .wp-collapse-open a::before{
 	content: "" !important;
 	background-image: url(assets/faqs-arrow.svg);
-	width: 16px;
-	height: 16px;
+	width: 20px;
+	height: 20px;
 	display: inline-block;
 	opacity: 1;
 	background-size: contain;
 	background-repeat: no-repeat;
-}
-#faq a.close-all-link::before {
 	-webkit-transform: rotate(-180deg);
 	-moz-transform: rotate(-180deg);
 	-ms-transform: rotate(-180deg);
 	-o-transform: rotate(-180deg);
 	transform: rotate(-180deg);
 }
-#faq a span{
+#faq a.close-all-link::before, .checkout-accordion .wp-collapse-open a.close-all-link::before {
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+}
+#faq a span, .checkout-accordion .wp-collapse-open a span{
 	display: none;
 }
 /*
